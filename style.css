@@ -1,0 +1,71 @@
+/* Make the container a flexbox */
+.post-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    padding: 0;
+    margin-top: -5%; /* Specific space above */
+    margin-bottom: 0px; /* Specific space below */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style the image container */
+.post-image {
+    flex: 1; /* Takes 1 part of the available space */
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post.featured {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.post-image img {
+    width: 100%;
+    max-width: 500px; /* Adjust image size */
+    height: auto;
+}
+
+/* Style the text container */
+.post-content {
+    flex: 1.5; /* Takes more space than the image */
+    text-align: left;
+}
+
+.post-content h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.post-content p {
+    margin-top: 0;
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .post-container {
+        flex-direction: column; /* Stack items on small screens */
+        text-align: center;
+    }
+
+    .post-image {
+        order: -1; /* Moves image above text */
+    }
+}
+
+
